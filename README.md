@@ -33,3 +33,14 @@ program
 - `-p`, `--port` 옵션으로 포트번호 전달
 - `-e`, `--env` 옵션으로 환경 전달  
 - option을 추가하여 cli로 추가적인 인자 전달 가능
+
+### uiExecutor.ts
+```typescript
+export function runHtmlUi(port: number) {
+  const appName = 'app-name';
+  const htmlPath = `${process.cwd()}/node_modules/${appName}/ui/index.html`;
+  addPortToHtml(htmlPath, port);
+  exec(`${getCommandLine()} ${htmlPath}`);
+}
+```
+appName: `package.json`에서 `"name"` 속성에 작성한 패키지명
