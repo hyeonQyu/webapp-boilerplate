@@ -43,4 +43,4 @@ export function runHtmlUi(port: number) {
   exec(`${getCommandLine()} ${htmlPath}`);
 }
 ```
-appName: `package.json`에서 `"name"` 속성에 작성한 패키지명
+appName: [package.json](#packagejson) 에서 `"name"` 속성에 작성한 패키지명
