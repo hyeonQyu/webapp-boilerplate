@@ -1,5 +1,6 @@
 import { AppOption } from './defines/appOption';
 import { Default } from './defines/common/default';
+import { UiExecutor } from './utils/uiExecutor';
 
 const express = require('express');
 const server = express();
@@ -16,7 +17,7 @@ module.exports = {
                 const options: AppOption = program.opts();
                 const { port = defaultOption.port, env = defaultOption.env } = options;
                 const limit = '1000mb';
-                
+
                 server.use(cors());
                 server.use(bodyParser.json({ limit }));
                 server.use(
@@ -25,11 +26,14 @@ module.exports = {
                         limit,
                     }),
                 );
-                
+
                 server.listen(Default.PORT, () => {
                     console.log(`locale json manager started with port ${port}`);
                 });
-                
+
+                if (env === 'production') {
+                    UiExecutor.runHtmlUi(port);
+                }
             })
             .parse(process.argv);
     },
