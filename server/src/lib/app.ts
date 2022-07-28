@@ -1,6 +1,7 @@
 import { AppOption } from './defines/appOption';
 import { Default } from './defines/common/default';
 import { UiExecutor } from './utils/uiExecutor';
+import { Controller } from './apis/controller';
 
 const express = require('express');
 const server = express();
@@ -30,6 +31,8 @@ module.exports = {
                 server.listen(Default.PORT, () => {
                     console.log(`locale json manager started with port ${port}`);
                 });
+
+                Controller.response(server);
 
                 if (env === 'production') {
                     UiExecutor.runHtmlUi(port);
