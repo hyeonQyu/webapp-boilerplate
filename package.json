@@ -1,0 +1,39 @@
+{
+  "name": "app-name",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": {
+    "packages": ["apps/*", "packages/*"]
+  },
+  "scripts": {
+    "dev:client": "yarn --cwd apps/client run dev",
+    "dev:server": "yarn --cwd apps/server run dev",
+
+    "build:client": "yarn --cwd apps/client run build",
+    "build:server": "yarn --cwd apps/server run build",
+    "build": "yarn build:client && yarn build:server",
+    "publish": "yarn --cwd apps/"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "typescript": "^4.9.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "hyeonQyu",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}

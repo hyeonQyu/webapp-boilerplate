@@ -1,0 +1,56 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\khg0408\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Users\khg0408\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\khg0408\bin;C:\Python310\Scripts;C:\Python310;C:\Program Files\Eclipse Adoptium\jdk-11.0.13.8-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Java\jdk1.8.0_231\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Users\khg0408\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip;C:\Users\khg0408\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\khg0408\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.18.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EBUSY: resource busy or locked, scandir 'D:\DumpStack.log.tmp'
+
+npm manifest: 
+  {
+    "private": true,
+    "workspaces": {
+      "packages": ["/*"]
+    },
+    "scripts": {
+      "dev:client": "",
+      "dev:server": "",
+  
+      "build:client": "yarn --cwd ./client run build",
+      "build:server": "yarn --cwd ./server run build",
+      "build": "yarn build:client && yarn build:server"
+    },
+    "dependencies": {
+      "axios": "^0.27.2"
+    },
+    "devDependencies": {
+      "@types/node": "^18.11.17",
+      "typescript": "^4.9.4"
+    },
+    "repository": {
+      "type": "git",
+      "url": ""
+    },
+    "author": "",
+    "license": "",
+    "bugs": {
+      "url": ""
+    },
+    "homepage": ""
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

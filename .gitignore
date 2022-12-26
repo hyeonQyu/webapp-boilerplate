@@ -1,1 +1,2 @@
-server/dist
+apps/server/dist
+node_modules
