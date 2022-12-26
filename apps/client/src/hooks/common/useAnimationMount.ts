@@ -1,31 +1,31 @@
 import { useEffect, useState } from 'react';
 
 export interface IUseAnimationMountParams {
-    display: boolean;
-    disappearAnimationDuration: number;
+  display: boolean;
+  disappearAnimationDuration: number;
 }
 
 export interface IUseAnimationMount {
-    mounted: boolean;
+  mounted: boolean;
 }
 
 export default function useAnimationMount(params: IUseAnimationMountParams): IUseAnimationMount {
-    const { display, disappearAnimationDuration } = params;
+  const { display, disappearAnimationDuration } = params;
 
-    const [mounted, setMounted] = useState(display);
+  const [mounted, setMounted] = useState(display);
 
-    useEffect(() => {
-        if (display) {
-            setMounted(true);
-            return;
-        }
+  useEffect(() => {
+    if (display) {
+      setMounted(true);
+      return;
+    }
 
-        setTimeout(() => {
-            setMounted(false);
-        }, disappearAnimationDuration * 1000);
-    }, [display]);
+    setTimeout(() => {
+      setMounted(false);
+    }, disappearAnimationDuration * 1000);
+  }, [display]);
 
-    return {
-        mounted,
-    };
+  return {
+    mounted,
+  };
 }

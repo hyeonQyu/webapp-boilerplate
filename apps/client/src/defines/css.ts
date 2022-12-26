@@ -10,13 +10,13 @@ type PositionProperty = VerticalPositionProperty | HorizontalPositionProperty;
 type SpaceProperty = 'padding' | 'margin';
 
 export type SizeProperty =
-    | 'width'
-    | 'height'
-    | PositionProperty
-    | `${SpaceProperty}-${PositionProperty}`
-    | 'border-radius'
-    | 'line-height'
-    | 'font-size';
+  | 'width'
+  | 'height'
+  | PositionProperty
+  | `${SpaceProperty}-${PositionProperty}`
+  | 'border-radius'
+  | 'line-height'
+  | 'font-size';
 
 export type Size = number | `${number}px` | `${number}%` | `${number}rem` | `${number}em` | 'fit-content';
 
