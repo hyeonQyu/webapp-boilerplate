@@ -5,23 +5,23 @@ import { RecoilRoot } from 'recoil';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { useEffect } from 'react';
 import { HomeApi } from '@apis/homeApi';
-import { Default } from '@defines/common/default';
+import { DefaultConfig } from '@hyeonqyu/app-common';
 
 function MyApp({ Component, pageProps }: AppProps) {
-    const queryClient = new QueryClient();
+  const queryClient = new QueryClient();
 
-    useEffect(() => {
-        const portString = document.getElementById('port')?.getAttribute('value');
-        HomeApi.setPort(portString ? Number(portString) : Default.PORT);
-    }, []);
+  useEffect(() => {
+    const portString = document.getElementById('port')?.getAttribute('value');
+    HomeApi.setPort(portString ? Number(portString) : DefaultConfig.PORT);
+  }, []);
 
-    return (
-        <RecoilRoot>
-            <QueryClientProvider client={queryClient}>
-                <Component {...pageProps} />
-            </QueryClientProvider>
-        </RecoilRoot>
-    );
+  return (
+    <RecoilRoot>
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+      </QueryClientProvider>
+    </RecoilRoot>
+  );
 }
 
 export default MyApp;
