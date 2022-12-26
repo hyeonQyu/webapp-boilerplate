@@ -1,14 +1,17 @@
 # webapp-boilerplate
 
+## root package.json
+```json
+"name": "app-name",
+"version": "0.0.1"
+```
+npm으로 배포되는 패키지명 및 버전
+그 외 author, licenses, bugs, homepage 필드 입력 가능
+
 ## server
-node.js 서버로 실제 npm 배포되는 프로젝트 루트 디렉토리
+node.js 서버
 
 ### package.json
-```json
-"name": "app-name"
-```
-npm으로 배포되는 패키지명
-
 ```json
 "bin": {
   "cli-command": "bin/cli.js"
@@ -43,4 +46,4 @@ export function runHtmlUi(port: number) {
   exec(`${getCommandLine()} ${htmlPath}`);
 }
 ```
-appName: [package.json](#packagejson) 에서 `"name"` 속성에 작성한 패키지명
+appName: [package.json](#rootpackagejson) 에서 `"name"` 속성에 작성한 패키지명
