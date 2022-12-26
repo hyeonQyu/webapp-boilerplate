@@ -1,22 +1,15 @@
 {
   "private": true,
-  "description": "",
+  "name": "server",
+  "version": "0.0.1",
   "main": "src/lib/app.ts",
   "bin": {
     "cli-command": "bin/cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "SET \"NODE_ENV=development\" && nodemon --watch \"src/lib/**/*.ts\" --exec \"ts-node\" src/bin/cli.ts",
-    "build": "tsc -p . && node setupPackage.js"
+    "build": "tsc -p ."
   },
-  "author": "hyeonQyu",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://www.opensource.org/licenses/MIT"
-    }
-  ],
   "dependencies": {
     "body-parser": "^1.20.0",
     "cheerio": "^1.0.0-rc.12",
