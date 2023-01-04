@@ -10,9 +10,4 @@ export interface UseMutationParams<Res, Req> {
   mutationOption?: UseMutationOptions<Res, AxiosError, Req>;
 }
 
-export const QUERY_KEY = {
-  directory: {
-    base: ['directory'] as const,
-    getDirectory: (path: string) => [...QUERY_KEY.directory.base, 'get', 'directory', path],
-  },
-};
+export const QUERY_KEY = {};
