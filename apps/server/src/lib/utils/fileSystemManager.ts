@@ -1,5 +1,6 @@
+const fs = require('fs');
+
 export namespace FileSystemManager {
-  const fs = require('fs');
 
   export function createDirectoryWhenNotExist(directoryPath: string) {
     if (!fs.existsSync(directoryPath)) {
