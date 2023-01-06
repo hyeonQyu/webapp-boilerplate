@@ -11,7 +11,7 @@ const removeDistDirectoryName = (config, propNames) => {
   const distDirectorySubPath = `${DIST_DIRECTORY_NAME}/`;
   propNames.forEach((propName) => {
     if (config[propName].startsWith(distDirectorySubPath)) {
-      config[propName] = config[propName].slice(distDirectorySubPath);
+      config[propName] = config[propName].slice(distDirectorySubPath.length);
     }
   });
 };
