@@ -15,7 +15,7 @@ node.js 서버
 ```json
 "bin": {
   "cli-command": "bin/cli.js"
-},
+}
 ```
 - cli-command: 배포 후 npx를 통해 실행할 command `예) npx cli-command`
 - bin/cli.js: 파일명 변경 가능
@@ -26,6 +26,15 @@ node.js 서버
 }
 ```
 src/bin/cli.ts를 실제 지정한 파일명으로 작성
+
+### tsconfig.json
+```json
+"baseUrl": ".",
+"paths": {
+  "app-common": ["./common/index"]
+}
+```
+paths 내 app-common을 사용하는 common 모듈명으로 변경 
 
 ### app.ts
 ```typescript
